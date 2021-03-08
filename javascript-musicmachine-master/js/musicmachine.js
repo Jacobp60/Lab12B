@@ -61,15 +61,23 @@ $(document).ready(function () {
     // This anonymous function makes the Play Recording
     // button play the array of recorded notes
     $("#playButton").click(function () {
-        playRecording(song2);
+        playRecording(recordedNotes);
     });
 
     // Assign functions to the other buttons
     $("#recordButton").click(toggleRecording);
     $("#clearButton").click(clearRecording);
+    $("#songOneButton").click(songOneButton);
+    $("#songTwoButton").click(songTwoButton);
+
 
 });
-
+function songOneButton(){
+    playRecording(song)
+}
+function songTwoButton(){
+    playRecording(song2)
+}
 function clearRecording() {
     // create a new, empty array
     recordedNotes = [];
